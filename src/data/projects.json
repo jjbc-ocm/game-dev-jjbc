@@ -1,0 +1,276 @@
+[
+    {
+        "client": "Personal Projects",
+        "duration": "July 2025 - Present",
+        "url": "",
+        "certificateUrl": "",
+        "personal": true,
+        "projects": [
+            {
+                "name": "Smart Saving Tracker",
+                "url": "https://expense-ai-tracker-three.vercel.app/",
+                "imageUrl": "/assets/img/blank.png",
+                "description": "Personal SaaS expense tracking application with AI-powered natural language input. The AI automatically categorizes and records transactions.",
+                "metrics": [
+                    {
+                        "type": "AI Accuracy",
+                        "value": "95% accuracy in natural language parsing and transaction categorization using OpenAI integration"
+                    },
+                    {
+                        "type": "Development Speed",
+                        "value": "Built complete MVP in one week using modern development tools and AI assistance"
+                    },
+                    {
+                        "type": "Future Plans",
+                        "value": "Planning subscription model and advanced features for full SaaS monetization"
+                    }
+                ],
+                "tools": [
+                    "React",
+                    "TypeScript",
+                    "Material UI",
+                    "Supabase",
+                    "OpenAI API",
+                    "Vercel"
+                ],
+                "role": "Full-stack Developer",
+                "responsibilities": [
+                    "Built complete MVP with AI-powered natural language expense input",
+                    "Implemented user authentication and data persistence with Supabase",
+                    "Created responsive UI with Material UI for cross-device compatibility",
+                    "Integrated OpenAI API for intelligent transaction parsing and categorization",
+                    "Deployed and maintained production application on Vercel"
+                ]
+            }
+        ]
+    },
+    {
+        "client": "Cloudnode IT Solutions OPC",
+        "duration": "May 2024 - Aug 2025",
+        "url": "",
+        "certificateUrl": "",
+        "projects": [
+            {
+                "name": "Avalorians",
+                "url": "https://avalorians.io/",
+                "imageUrl": "/assets/img/avalorians-new-logo.webp",
+                "description": "Telegram Mini-app PvP battle game with city building mechanics. Built as a Clash Royale-like experience with reward-based progression.",
+                "metrics": [
+                    {
+                        "type": "Leadership",
+                        "value": "Mentored a junior frontend developer and led the entire frontend development"
+                    },
+                    {
+                        "type": "Key features",
+                        "value": "Built real-time PvP battles, city building system, and game mechanics"
+                    },
+                    {
+                        "type": "Frontend optimization",
+                        "value": "Reduced frontend load times by 50% and implemented linear interpolation to stabilize frame rate across devices"
+                    },
+                    {
+                        "type": "Server optimization",
+                        "value": "Implemented adaptive delta timing on multiplayer server to handle network latency and maintain game synchronization"
+                    },
+                    {
+                        "type": "Scalability",
+                        "value": "Scaled multiplayer server to support 100+ concurrent game sessions while maintaining low CPU and memory usage"
+                    }
+                ],
+                "tools": [
+                    "React",
+                    "TypeScript",
+                    "HTML",
+                    "CSS",
+                    "Responsive Design",
+                    "Mobile-First",
+                    "Phaser 3",
+                    "Colyseus",
+                    "Telegram SDK",
+                    "ChatGPT"
+                ],
+                "role": "Lead Frontend Developer",
+                "responsibilities": [
+                    "Managed and mentored junior frontend developer",
+                    "Built the entire game UI from Figma designs",
+                    "Created PvP battle system and city building mechanics",
+                    "Built and maintained multiplayer server with Colyseus"
+                ]
+            }
+        ]
+    },
+    {
+        "client": "Good Place Games",
+        "duration": "Apr 2022 - May 2024",
+        "url": "https://www.goodplace.games/about-1",
+        "projects": [
+            {
+                "name": "Dummy Pirates",
+                "url": "https://store.steampowered.com/app/2261610/Dummy_Pirates_Ocean_Tales/",
+                "imageUrl": "/assets/img/dummy-pirates.jpg",
+                "description": "Multiplayer Sea Battle Arena with unique ships and abilities.",
+                "metrics": [],
+                "tools": [
+                    "Unity",
+                    "C#",
+                    "Photon PUN",
+                    "Unity Gaming Services",
+                    "Steam SDK"
+                ],
+                "role": "Game Developer",
+                "responsibilities": [
+                    "Built ship customization system where players can equip different hulls, sails, and weapons",
+                    "Created multiplayer battle mechanics for 4v4 sea battles with unique ship abilities",
+                    "Connected game to Steam for achievements and player progress tracking"
+                ]
+            },
+            {
+                "name": "Cyberdogz",
+                "url": "https://x.com/gocyberdogz?lang=en",
+                "imageUrl": "/assets/img/cyberdogz.jpg",
+                "description": "Web-based game experience featuring NFT-integrated gameplay.",
+                "tools": [
+                    "Unity",
+                    "C#",
+                    "Firebase",
+                    "WebGL",
+                    "Metamask",
+                    "Solana"
+                ],
+                "role": "Game Developer",
+                "responsibilities": [
+                    "Built unified wallet connection system that supports both MetaMask and Solana wallets in a single interface"
+                ]
+            }
+        ]
+    },
+    {
+        "client": "Bardak LLC",
+        "duration": "Aug 2023 - Dec 2023",
+        "url": "https://play.google.com/store/apps/dev?id=8890811242161022509&hl=en",
+        "projects": [
+            {
+                "name": "Event Horizon: Space Shooter",
+                "url": "https://play.google.com/store/apps/details?id=com.bardak.ssg&hl=en",
+                "imageUrl": "/assets/img/event-horizon.png",
+                "description": "Top-down space shooter with partial damage mechanics and ship variety.",
+                "metrics": [
+                    {
+                        "type": "Downloads",
+                        "value": "50,000+ Downloads (as of July 2025)"
+                    }
+                ],
+                "tools": [
+                    "Unity",
+                    "C#",
+                    "Unity Gaming Services",
+                    "Admob SDK"
+                ],
+                "role": "Game Developer",
+                "responsibilities": [
+                    "Built space shooter with 30+ levels, boss battles, and progression system",
+                    "Created partial destruction system where players can destroy individual ship parts",
+                    "Designed achievement system and ship upgrade progression with 50+ upgrades"
+                ]
+            }
+        ]
+    },
+    {
+        "client": "GCML Resources, Inc.",
+        "duration": "Jan 2022 - May 2022",
+        "url": "",
+        "projects": [
+            {
+                "name": "Legends of the Pit v2.0",
+                "imageUrl": "/assets/img/lotp.jpg",
+                "description": "3D virtual cockfighting simulation game with cinematic combat sequences.",
+                "metrics": [
+                    {
+                        "type": "Battle System",
+                        "value": "Built combat system with customizable battle rules and randomized action sequences for dynamic gameplay"
+                    }
+                ],
+                "tools": [
+                    "PlayCanvas",
+                    "HTML",
+                    "CSS",
+                    "JavaScript"
+                ],
+                "role": "Jr. Frontend Game Developer",
+                "responsibilities": [
+                    "Assisted senior developer in building the battle system",
+                    "Created combat manager for virtual cockfighting matches",
+                    "Built randomized action sequences for dynamic gameplay"
+                ]
+            }
+        ]
+    },
+    {
+        "client": "Xurpas Inc.",
+        "duration": "May 2019 - Jun 2021",
+        "url": "",
+        "projects": [
+            {
+                "name": "Order Management Tool | Globe Online",
+                "imageUrl": "/assets/img/blank.png",
+                "description": "Internal ticketing system for order processing and customer service management.",
+                "metrics": [],
+                "tools": [
+                    "Angular JS",
+                    "Javascript",
+                    "HTML",
+                    "CSS",
+                    "Spring Boot",
+                    "Java",
+                    "SQL",
+                    "BitBucket"
+                ],
+                "role": "Full-stack Developer",
+                "responsibilities": [
+                    "Built internal ticketing system for order processing and customer service",
+                    "Created customer service workflow system with form validation",
+                    "Built full-stack features using AngularJS frontend and Spring Boot backend"
+                ]
+            },
+            {
+                "name": "HIMS 2.0 | Veridata Networks Inc.",
+                "imageUrl": "/assets/img/blank.png",
+                "description": "Healthcare Management Information System with membership, customer care, and admin modules.",
+                "metrics": [],
+                "tools": [
+                    "React",
+                    "Material UI",
+                    "Typescript",
+                    "HTML",
+                    "CSS",
+                    "GitLab"
+                ],
+                "role": "Jr. Frontend Web Developer",
+                "responsibilities": [
+                    "Built customer care module with dynamic form system for patient management",
+                    "Created patient type selection and disease classification system",
+                    "Built responsive UI components using React and Material UI for healthcare workflows"
+                ]
+            },
+            {
+                "name": "RFP | Mitchell Madison Group",
+                "imageUrl": "/assets/img/blank.png",
+                "description": "Request for Proposal management system with form-based workflow and document processing.",
+                "metrics": [],
+                "tools": [
+                    "React",
+                    "JavaScript",
+                    "HTML",
+                    "CSS",
+                    "GitLab"
+                ],
+                "role": "Jr. Frontend Web Developer",
+                "responsibilities": [
+                    "Built form-based interface for RFP submission and management",
+                    "Created document processing and workflow management system",
+                    "Built responsive web components using React for business proposal handling"
+                ]
+            }
+        ]
+    }
+]

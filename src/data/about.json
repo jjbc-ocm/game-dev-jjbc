@@ -1,0 +1,71 @@
+{
+    "header": {
+        "greeting": "Hi, I'm Jilmer 👋",
+        "tagline": "I build web applications and mobile games that people actually want to use.",
+        "description": "From web apps to mobile games with thousands of users, I focus on creating experiences that work well and feel good to use.",
+        "cta_button": "View My Work"
+    },
+    "bio": [
+        "Hey, I'm Jilmer — a frontend developer who loves building things people actually use. My biggest project was Avalorians, a game where players battle each other in a Clash Royale-style experience.",
+        "I specialize in React, TypeScript, and modern frontend development. I love writing clean, optimized code and use tools like Cursor and ChatGPT to stay efficient. I'm passionate about creating features that users actually want.",
+        "When I'm not coding, you'll find me lifting weights or playing video games. I'm always learning and building new things."
+    ],
+    "short_summary": "Frontend developer with 5+ years of experience specializing in React, TypeScript, and web development. I love writing clean, optimized code and use modern tools to stay efficient.",
+    "portfolio_url": "https://jjbc-portfolio.netlify.app/",
+    "github_url": "https://github.com/jjbc-ocm",
+    "technologies": [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Material UI",
+        "Responsive Design",
+        "Node.js",
+        "Supabase",
+        "OpenAI API",
+        "Vercel",
+        "GitHub",
+        "GitLab",
+        "Cursor",
+        "ChatGPT",
+        "Colyseus",
+        "Unity",
+        "C#"
+    ],
+    "highlights": [
+        {
+            "icon": "Devices",
+            "text": "Created mobile-first applications that work smoothly across all devices"
+        },
+        {
+            "icon": "Speed",
+            "text": "Cut game loading times in half and handled 100+ simultaneous players without lag"
+        },
+        {
+            "icon": "Build",
+            "text": "Built multiplayer game with PvP battles and city building mechanics"
+        }
+    ],
+    "education": [
+        {
+            "degree": "Bachelor of Science in Computer Science",
+            "school": "Our Lady of Fatima University, QC Campus",
+            "duration": "2015 - 2019"
+        }
+    ],
+    "references": [
+        {
+            "name": "Nichole Jan Anastacio",
+            "position": "UI/UX Designer",
+            "company": "Cloudnode IT Solutions",
+            "email": "nicholejan08@gmail.com"
+        },
+        {
+            "name": "Eduardo De Guzman III",
+            "position": "Lead Backend Developer",
+            "company": "Cloudnode IT Solutions",
+            "email": "kaidolex@gmail.com"
+        }
+    ]
+}
