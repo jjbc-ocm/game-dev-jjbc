@@ -1,50 +1,53 @@
 {
     "header": {
         "greeting": "Hi, I'm Jilmer 👋",
-        "tagline": "I build web applications and mobile games that people actually want to use.",
-        "description": "From web apps to mobile games with thousands of users, I focus on creating experiences that work well and feel good to use.",
+        "tagline": "I create engaging games and interactive experiences that players love.",
+        "description": "From multiplayer battle arenas to immersive game worlds, I focus on crafting experiences that are both fun and technically solid.",
         "cta_button": "View My Work"
     },
     "bio": [
-        "Hey, I'm Jilmer — a frontend developer who loves building things people actually use. My biggest project was Avalorians, a game where players battle each other in a Clash Royale-style experience.",
-        "I specialize in React, TypeScript, and modern frontend development. I love writing clean, optimized code and use tools like Cursor and ChatGPT to stay efficient. I'm passionate about creating features that users actually want.",
-        "When I'm not coding, you'll find me lifting weights or playing video games. I'm always learning and building new things."
+        "Hey, I'm Jilmer — a game developer passionate about creating engaging player experiences. My flagship project was Avalorians, a multiplayer battle arena game that combines strategic combat with city-building mechanics.",
+        "I specialize in Unity, C#, and multiplayer game development. I love optimizing game performance and creating smooth player experiences. My background in web development helps me create seamless game interfaces and robust backend systems.",
+        "When I'm not coding games, you'll find me exploring new game mechanics, lifting weights, or analyzing game design in the titles I play. I'm constantly learning and experimenting with new game development techniques."
     ],
-    "short_summary": "Frontend developer with 5+ years of experience specializing in React, TypeScript, and web development. I love writing clean, optimized code and use modern tools to stay efficient.",
+    "short_summary": "Game Developer with experience in Unity, C#, and multiplayer systems. I focus on creating engaging player experiences while maintaining technical excellence.",
     "portfolio_url": "https://jjbc-portfolio.netlify.app/",
     "github_url": "https://github.com/jjbc-ocm",
     "technologies": [
+        "Unity",
+        "C#",
+        "Phaser 3",
+        "Game Design",
+        "Multiplayer Systems",
+        "Colyseus",
+        "Node.js",
+        "Supabase",
         "React",
         "TypeScript",
         "JavaScript",
         "HTML",
         "CSS",
         "Material UI",
-        "Responsive Design",
-        "Node.js",
-        "Supabase",
         "OpenAI API",
-        "Vercel",
         "GitHub",
-        "GitLab",
-        "Cursor",
-        "ChatGPT",
-        "Colyseus",
-        "Unity",
-        "C#"
+        "GitLab"
     ],
     "highlights": [
         {
-            "icon": "Devices",
-            "text": "Created mobile-first applications that work smoothly across all devices"
+            "icon": "SportsEsports",
+            "text": "Developed a multiplayer battle arena game with strategic combat and city building"
         },
         {
             "icon": "Speed",
-            "text": "Cut game loading times in half and handled 100+ simultaneous players without lag"
+            "text": "Optimized game performance to handle 100+ simultaneous players with minimal latency"
+        },
+        {
+            "icon": "Loop",
+            "text": "Implemented real-time multiplayer systems with smooth player synchronization"
         },
         {
             "icon": "Build",
-            "text": "Built multiplayer game with PvP battles and city building mechanics"
+            "text": "Created modular game systems for easy feature expansion and maintenance"
         }
     ],
     "education": [

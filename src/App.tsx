@@ -7,26 +7,52 @@ import Projects from './components/projects/Projects'
 import Contact from './components/Contact'
 import Resume from './components/Resume'
 
-// Create a custom theme with our cohesive color palette
+// Create a custom theme with Batman-inspired dark color palette
 const theme = createTheme({
   palette: {
+    mode: 'dark',
     primary: {
-      main: '#6366f1',
-      light: '#8b5cf6',
-      dark: '#5b5ee6',
+      main: '#FFD700', // Gold
+      light: '#FFE55C',
+      dark: '#B29700',
     },
     secondary: {
-      main: '#8b5cf6',
-      light: '#a78bfa',
-      dark: '#7c3aed',
+      main: '#C0C0C0', // Silver/Gray
+      light: '#E6E6E6',
+      dark: '#808080',
     },
     text: {
-      primary: '#1f2937',
-      secondary: '#6b7280',
+      primary: '#FFFFFF',
+      secondary: '#B8B8B8',
     },
     background: {
-      default: '#f8fafc',
-      paper: '#ffffff',
+      default: '#121212', // Dark background
+      paper: '#1E1E1E', // Slightly lighter dark
+    },
+    error: {
+      main: '#FF4444',
+    },
+    success: {
+      main: '#4CAF50',
+      light: '#81C784',
+      dark: '#388E3C',
+    },
+    custom: {
+      sectionBackground: {
+        primary: '#121212',
+        secondary: '#1E1E1E',
+        accent: 'rgba(255, 215, 0, 0.05)', // Gold with low opacity
+      },
+      gradients: {
+        primary: 'linear-gradient(135deg, #FFD700 0%, #FFE55C 100%)',
+        secondary: 'linear-gradient(135deg, #C0C0C0 0%, #E6E6E6 100%)',
+        dark: 'linear-gradient(135deg, #121212 0%, #1E1E1E 100%)',
+      },
+      iconColors: {
+        primary: '#FFD700',
+        secondary: '#C0C0C0',
+        accent: '#4CAF50',
+      },
     },
   },
   typography: {
@@ -71,12 +97,74 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: 12,
-          boxShadow: '0 4px 20px rgba(0,0,0,0.08)',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.3)',
+          backgroundColor: '#1E1E1E',
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          backgroundColor: '#1E1E1E',
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          borderColor: '#FFD700',
+          color: '#FFD700',
+          '&.MuiChip-outlinedPrimary': {
+            borderColor: '#FFD700',
+            color: '#FFD700',
+          },
         },
       },
     },
   },
 });
+
+// Add custom palette to theme type
+declare module '@mui/material/styles' {
+  interface Palette {
+    custom: {
+      sectionBackground: {
+        primary: string;
+        secondary: string;
+        accent: string;
+      };
+      gradients: {
+        primary: string;
+        secondary: string;
+        dark: string;
+      };
+      iconColors: {
+        primary: string;
+        secondary: string;
+        accent: string;
+      };
+    };
+  }
+  interface PaletteOptions {
+    custom?: {
+      sectionBackground?: {
+        primary?: string;
+        secondary?: string;
+        accent?: string;
+      };
+      gradients?: {
+        primary?: string;
+        secondary?: string;
+        dark?: string;
+      };
+      iconColors?: {
+        primary?: string;
+        secondary?: string;
+        accent?: string;
+      };
+    };
+  }
+}
 
 function App() {
   return (

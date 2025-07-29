@@ -1,5 +1,5 @@
 import { Launch, Star } from "@mui/icons-material";
-import { Box, Card, CardActions, CardContent, Divider, Grid, Typography } from "@mui/material";
+import { Box, Card, CardActions, CardContent, Divider, Grid, Typography, useTheme } from "@mui/material";
 import { Button } from "../ui/Button";
 import { Tools } from "./Tools";
 import { Metrics } from "./Metrics";
@@ -12,6 +12,7 @@ interface IProps {
 }
 
 export const Project = (props: IProps) => {
+    const theme = useTheme();
     // If there's only one project, make it full width; otherwise use half width on medium+ screens
     const gridSize = props.totalProjects === 1 ? { xs: 12 } : { xs: 12, md: 6 };
 
@@ -25,12 +26,12 @@ export const Project = (props: IProps) => {
                     transition: 'all 0.3s ease-in-out',
                     '&:hover': {
                         transform: 'translateY(-4px)',
-                        boxShadow: '0 8px 25px rgba(0,0,0,0.15)'
+                        boxShadow: `0 8px 25px ${theme.palette.mode === 'dark' ? 'rgba(0,0,0,0.4)' : 'rgba(0,0,0,0.15)'}`
                     },
                     border: '1px solid',
-                    borderColor: 'rgba(0,0,0,0.08)',
+                    borderColor: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)',
                     borderRadius: 3,
-                    backgroundColor: 'white',
+                    backgroundColor: theme.palette.background.paper,
                     position: 'relative',
                     overflow: 'hidden'
                 }}
@@ -59,7 +60,7 @@ export const Project = (props: IProps) => {
                                 right: 0,
                                 top: 0,
                                 bottom: 0,
-                                background: 'linear-gradient(to bottom, rgba(0,0,0,0.38) 50%, rgba(255,255,255,1) 100%)',
+                                background: `linear-gradient(to bottom, rgba(0,0,0,0.38) 50%, ${theme.palette.background.paper} 100%)`,
                                 borderTopLeftRadius: 12,
                                 borderTopRightRadius: 12,
                             }
@@ -85,7 +86,7 @@ export const Project = (props: IProps) => {
                     }}>
                         <Box sx={{ maxWidth: '80%', pointerEvents: 'auto' }}>
                             <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                                <Star sx={{ color: '#f59e0b', mr: 1, textShadow: '0 2px 8px rgba(0,0,0,0.18)' }} />
+                                <Star sx={{ color: theme.palette.primary.main, mr: 1, textShadow: '0 2px 8px rgba(0,0,0,0.18)' }} />
                                 <Typography 
                                     variant="h5" 
                                     component="h4" 
@@ -112,8 +113,8 @@ export const Project = (props: IProps) => {
                             </Typography>
                             <Box sx={{
                                 display: 'inline-block',
-                                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-                                color: 'white',
+                                background: theme.palette.custom.gradients.primary,
+                                color: theme.palette.background.default,
                                 px: 2,
                                 py: 0.5,
                                 borderRadius: 2,
@@ -127,7 +128,7 @@ export const Project = (props: IProps) => {
                         </Box>
                     </Box>
                     <Box sx={{ height: '270px' }} />
-                    <Divider sx={{ my: 2, borderColor: 'rgba(0,0,0,0.08)' }} />
+                    <Divider sx={{ my: 2, borderColor: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)' }} />
                     <Tools tools={props.project.tools} />
                     <Metrics metrics={props.project.metrics} />
                     <Responsibilities responsibilities={props.project.responsibilities} />

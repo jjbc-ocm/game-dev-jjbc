@@ -9,7 +9,8 @@ import {
     ListItem,
     ListItemText,
     Chip,
-    Button
+    Button,
+    useTheme
 } from '@mui/material';
 import { Description, Download } from '@mui/icons-material';
 import aboutData from '../data/about.json';
@@ -20,7 +21,7 @@ function renderResumeContent() {
     <div id="resume-section" style="font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif; background: white; color: #1f2937; padding: 40px; max-width: 900px; margin: auto;">
         <div style="text-align: center; margin-bottom: 32px;">
             <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">Jilmer John Cariaso</h1>
-            <h2 style="font-size: 1.25rem; font-weight: 600; color: #6b7280; margin-bottom: 0.5rem;">Software Developer</h2>
+            <h2 style="font-size: 1.25rem; font-weight: 600; color: #6b7280; margin-bottom: 0.5rem;">Game Developer</h2>
             <div style="color: #6b7280; font-size: 1rem;">+63 920 813 0511 • jjbconecodeman@gmail.com • 
                 <a href="${aboutData.portfolio_url}" target="_blank" rel="noopener noreferrer" style="color: #6366f1; text-decoration: none; font-weight: 500;">
                     Portfolio
@@ -112,6 +113,8 @@ function renderResumeContent() {
 }
 
 export default function Resume() {
+    const theme = useTheme();
+    
     const handleOpenPrintWindow = () => {
         const printWindow = window.open('', '_blank', 'width=1024,height=800');
         if (printWindow) {
@@ -123,20 +126,20 @@ export default function Resume() {
     return (
         <div id="resume" style={{ 
             minHeight: "100vh", 
-            background: "linear-gradient(135deg, #1f2937 0%, #374151 100%)",
+            background: `linear-gradient(135deg, ${theme.palette.background.default} 0%, ${theme.palette.background.paper} 100%)`,
             padding: "80px 0"
         }}>
             <Container maxWidth="md">
                 <Box sx={{ textAlign: 'center', mb: 6 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 2 }}>
-                        <Description sx={{ fontSize: 40, mr: 2, color: '#6366f1' }} />
+                        <Description sx={{ fontSize: 40, mr: 2, color: theme.palette.primary.main }} />
                         <Typography 
                             variant="h2" 
                             component="h2" 
                             sx={{ 
                                 fontWeight: 800, 
-                                color: 'white',
-                                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                                color: theme.palette.text.primary,
+                                background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.primary.light} 100%)`,
                                 backgroundClip: 'text',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent'
@@ -145,7 +148,7 @@ export default function Resume() {
                             Resume
                         </Typography>
                     </Box>
-                    <Typography variant="h6" color="#d1d5db" sx={{ fontWeight: 400, mb: 3 }}>
+                    <Typography variant="h6" sx={{ color: theme.palette.text.secondary, fontWeight: 400, mb: 3 }}>
                         Professional Experience & Skills
                     </Typography>
                     {/* <Button
@@ -177,8 +180,8 @@ export default function Resume() {
                     <Button
                         variant="contained"
                         startIcon={<Download />}
-                        href="/assets/pdf/Jilmer Cariaso Resume.pdf"
-                        download="Jilmer Cariaso Resume.pdf"
+                        href="/assets/pdf/Jilmer Cariaso Resume (Game Dev).pdf"
+                        download="Jilmer Cariaso Resume (Game Dev).pdf"
                         sx={{
                             background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
                             color: 'white',
@@ -223,7 +226,7 @@ export default function Resume() {
                             Jilmer John Cariaso
                         </Typography>
                         <Typography variant="h6" color="#6b7280" sx={{ mb: 2 }}>
-                            Software Developer
+                            Game Developer
                         </Typography>
                         <Typography variant="body1" color="#6b7280">
                             +63 920 813 0511 • jjbconecodeman@gmail.com •{' '}

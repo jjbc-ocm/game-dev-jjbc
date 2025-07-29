@@ -58,7 +58,7 @@
                 "metrics": [
                     {
                         "type": "Leadership",
-                        "value": "Mentored a junior frontend developer and led the entire frontend development"
+                        "value": "Led the game development and mentored a junior developer"
                     },
                     {
                         "type": "Key features",
@@ -78,23 +78,24 @@
                     }
                 ],
                 "tools": [
+                    "Phaser 3",
                     "React",
                     "TypeScript",
                     "HTML",
                     "CSS",
                     "Responsive Design",
                     "Mobile-First",
-                    "Phaser 3",
                     "Colyseus",
                     "Telegram SDK",
                     "ChatGPT"
                 ],
-                "role": "Lead Frontend Developer",
+                "role": "Lead Game Developer",
                 "responsibilities": [
-                    "Managed and mentored junior frontend developer",
-                    "Built the entire game UI from Figma designs",
+                    "Led game development and mentored a junior developer",
+                    "Architected and implemented core game mechanics and systems",
                     "Created PvP battle system and city building mechanics",
-                    "Built and maintained multiplayer server with Colyseus"
+                    "Built and maintained multiplayer server with Colyseus",
+                    "Optimized game performance across different devices"
                 ]
             }
         ]

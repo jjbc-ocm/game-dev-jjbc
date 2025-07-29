@@ -12,7 +12,8 @@ import {
   ListItemText,
   useTheme,
   useMediaQuery,
-  Typography
+  Typography,
+  alpha
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Home, Info, Work, ContactMail, Description } from '@mui/icons-material';
@@ -90,10 +91,10 @@ export default function Navbar() {
     <AppBar 
       position="fixed" 
       sx={{ 
-        background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-        boxShadow: '0 4px 20px rgba(99, 102, 241, 0.3)',
+        background: theme.palette.custom.gradients.dark,
+        boxShadow: `0 4px 20px ${alpha(theme.palette.primary.main, 0.3)}`,
         backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid rgba(255, 255, 255, 0.1)'
+        borderBottom: `1px solid ${alpha(theme.palette.primary.main, 0.1)}`
       }}
     >
       <Container maxWidth="lg">
@@ -115,13 +116,13 @@ export default function Navbar() {
               sx={{
                 width: { xs: 32, sm: 40 },
                 height: { xs: 32, sm: 40 },
-                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                background: theme.palette.custom.gradients.primary,
                 borderRadius: 2,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 mr: { xs: 1, sm: 2 },
-                boxShadow: '0 2px 8px rgba(0,0,0,0.15)'
+                boxShadow: `0 2px 8px ${alpha(theme.palette.primary.main, 0.3)}`
               }}
             >
               <Typography
@@ -129,7 +130,7 @@ export default function Navbar() {
                   fontFamily: "Consolas, 'Courier New', monospace",
                   fontSize: { xs: '1.2rem', sm: '1.5rem' },
                   fontWeight: 'bold',
-                  color: 'white',
+                  color: theme.palette.background.default,
                   lineHeight: 1
                 }}
               >
@@ -140,7 +141,7 @@ export default function Navbar() {
               variant="h6"
               sx={{
                 fontWeight: 700,
-                color: 'white',
+                color: theme.palette.primary.main,
                 display: { xs: 'none', sm: 'block' },
                 fontSize: { xs: '1.1rem', sm: '1.3rem' }
               }}
@@ -156,9 +157,9 @@ export default function Navbar() {
               aria-label="menu"
               onClick={() => setDrawerOpen(true)}
               sx={{ 
-                color: 'white',
+                color: theme.palette.primary.main,
                 '&:hover': {
-                  backgroundColor: 'rgba(255, 255, 255, 0.1)'
+                  backgroundColor: alpha(theme.palette.primary.main, 0.1)
                 }
               }}
             >
@@ -180,8 +181,8 @@ export default function Navbar() {
             PaperProps={{ 
               sx: { 
                 width: 280, 
-                background: 'white',
-                boxShadow: '0 8px 32px rgba(0,0,0,0.12)'
+                background: theme.palette.background.paper,
+                boxShadow: `0 8px 32px ${alpha(theme.palette.common.black, 0.3)}`
               } 
             }}
           >
@@ -190,7 +191,7 @@ export default function Navbar() {
                 variant="h6"
                 sx={{
                   fontWeight: 700,
-                  color: '#6366f1',
+                  color: theme.palette.primary.main,
                   mb: 2,
                   textAlign: 'center',
                   fontSize: '1.2rem'
@@ -212,7 +213,7 @@ export default function Navbar() {
                       margin: '4px 0',
                       padding: '12px 16px',
                       fontWeight: 500,
-                      color: '#1f2937',
+                      color: theme.palette.text.primary,
                       display: 'flex',
                       alignItems: 'center',
                       transition: 'background 0.2s, color 0.2s',
@@ -220,13 +221,13 @@ export default function Navbar() {
                       minHeight: 48,
                       width: '100%',
                       '&:hover, &:focus': {
-                        background: '#f3f4f6',
-                        color: '#6366f1',
+                        background: alpha(theme.palette.primary.main, 0.1),
+                        color: theme.palette.primary.main,
                         outline: 'none',
                       },
                     }}
                   >
-                    <ListItemIcon sx={{ color: '#6366f1', minWidth: 36, mr: 1 }}>{item.icon}</ListItemIcon>
+                    <ListItemIcon sx={{ color: theme.palette.primary.main, minWidth: 36, mr: 1 }}>{item.icon}</ListItemIcon>
                     <ListItemText primary={item.label} sx={{ '.MuiListItemText-primary': { fontWeight: 500, fontSize: '1.05rem' } }} />
                   </ListItem>
                 ))}

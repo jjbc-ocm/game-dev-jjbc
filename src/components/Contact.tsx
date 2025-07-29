@@ -14,6 +14,8 @@ import { Email, Send, GitHub, LinkedIn, Description } from '@mui/icons-material'
 import { Button } from './ui/Button';
 import { TextField } from './ui/TextField';
 import emailjs from '@emailjs/browser';
+import { useTheme } from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 
 interface FormData {
     name: string;
@@ -30,6 +32,7 @@ interface FormErrors {
 }
 
 export default function Contact() {
+    const theme = useTheme();
     const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
@@ -143,20 +146,20 @@ export default function Contact() {
     return (
         <section id="contact" style={{ 
             minHeight: "100vh", 
-            background: "linear-gradient(135deg, #1f2937 0%, #374151 100%)",
+            background: theme.palette.custom.gradients.dark,
             padding: "80px 0"
         }}>
             <Container maxWidth="lg">
                 <Box sx={{ textAlign: 'center', mb: 6 }}>
                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 2 }}>
-                        <Email sx={{ fontSize: 40, mr: 2, color: '#6366f1' }} />
+                        <Email sx={{ fontSize: 40, mr: 2, color: theme.palette.custom.iconColors.primary }} />
                         <Typography 
                             variant="h2" 
                             component="h2" 
                             sx={{ 
                                 fontWeight: 800, 
-                                color: 'white',
-                                background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+                                color: theme.palette.text.primary,
+                                background: theme.palette.custom.gradients.primary,
                                 backgroundClip: 'text',
                                 WebkitBackgroundClip: 'text',
                                 WebkitTextFillColor: 'transparent'
@@ -165,7 +168,13 @@ export default function Contact() {
                             Contact
                         </Typography>
                     </Box>
-                    <Typography variant="h6" color="#d1d5db" sx={{ fontWeight: 400 }}>
+                    <Typography 
+                        variant="h6" 
+                        sx={{ 
+                            color: theme.palette.text.secondary, 
+                            fontWeight: 400 
+                        }}
+                    >
                         Let's work together
                     </Typography>
                 </Box>
@@ -180,14 +189,14 @@ export default function Contact() {
                             sx={{ 
                                 display: 'inline-flex', 
                                 alignItems: 'center', 
-                                color: '#d1d5db', 
+                                color: theme.palette.text.secondary, 
                                 textDecoration: 'none',
                                 p: 1,
                                 borderRadius: 1,
                                 transition: 'all 0.3s ease',
                                 '&:hover': {
-                                    color: '#6366f1',
-                                    backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                                    color: theme.palette.primary.main,
+                                    backgroundColor: alpha(theme.palette.primary.main, 0.1),
                                     transform: 'translateY(-2px)'
                                 }
                             }}
@@ -205,15 +214,15 @@ export default function Contact() {
                             sx={{ 
                                 display: 'inline-flex', 
                                 alignItems: 'center', 
-                                color: '#d1d5db', 
+                                color: theme.palette.text.secondary, 
                                 textDecoration: 'none',
                                 p: 1,
                                 borderRadius: 1,
                                 transition: 'all 0.3s ease',
                                 cursor: 'pointer',
                                 '&:hover': {
-                                    color: '#6366f1',
-                                    backgroundColor: 'rgba(99, 102, 241, 0.1)',
+                                    color: theme.palette.primary.main,
+                                    backgroundColor: alpha(theme.palette.primary.main, 0.1),
                                     transform: 'translateY(-2px)'
                                 }
                             }}
@@ -229,11 +238,31 @@ export default function Contact() {
                     sx={{ 
                         p: 4, 
                         borderRadius: 3,
-                        backgroundColor: 'white',
-                        border: '1px solid rgba(0,0,0,0.08)',
-                        boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
+                        backgroundColor: theme.palette.background.paper,
+                        border: `1px solid ${alpha(theme.palette.primary.main, 0.2)}`,
+                        boxShadow: `0 4px 20px ${alpha(theme.palette.common.black, 0.3)}`,
                         maxWidth: 600,
-                        mx: 'auto'
+                        mx: 'auto',
+                        '& .MuiInputBase-root': {
+                            backgroundColor: alpha(theme.palette.background.default, 0.5),
+                        },
+                        '& .MuiInputLabel-root': {
+                            color: theme.palette.text.secondary,
+                        },
+                        '& .MuiOutlinedInput-root': {
+                            '& fieldset': {
+                                borderColor: alpha(theme.palette.primary.main, 0.2),
+                            },
+                            '&:hover fieldset': {
+                                borderColor: alpha(theme.palette.primary.main, 0.3),
+                            },
+                            '&.Mui-focused fieldset': {
+                                borderColor: theme.palette.primary.main,
+                            },
+                        },
+                        '& .MuiInputBase-input': {
+                            color: theme.palette.text.primary,
+                        },
                     }}
                 >
                     <form onSubmit={handleSubmit}>
@@ -245,6 +274,7 @@ export default function Contact() {
                                 error={!!errors.name}
                                 helperText={errors.name}
                                 disabled={isSubmitting}
+                                fullWidth
                             />
                         </Box>
                         
@@ -257,6 +287,7 @@ export default function Contact() {
                                 error={!!errors.email}
                                 helperText={errors.email}
                                 disabled={isSubmitting}
+                                fullWidth
                             />
                         </Box>
                         
@@ -268,6 +299,7 @@ export default function Contact() {
                                 error={!!errors.subject}
                                 helperText={errors.subject}
                                 disabled={isSubmitting}
+                                fullWidth
                             />
                         </Box>
                         
@@ -281,6 +313,7 @@ export default function Contact() {
                                 error={!!errors.message}
                                 helperText={errors.message}
                                 disabled={isSubmitting}
+                                fullWidth
                             />
                         </Box>
                         
@@ -311,7 +344,7 @@ export default function Contact() {
                     sx={{ 
                         width: '100%',
                         borderRadius: 2,
-                        boxShadow: '0 4px 20px rgba(0,0,0,0.15)'
+                        boxShadow: `0 4px 20px ${alpha(theme.palette.common.black, 0.2)}`
                     }}
                 >
                     {snackbar.message}

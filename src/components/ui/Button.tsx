@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button as MuiButton, ButtonProps as MuiButtonProps, CircularProgress, SxProps, Theme } from '@mui/material';
 import { Link } from 'react-scroll';
+import { useTheme } from '@mui/material/styles';
+import { alpha } from '@mui/material/styles';
 
 interface ButtonProps extends Omit<MuiButtonProps, 'variant'> {
   variant?: 'primary' | 'navigation' | 'project';
@@ -32,6 +34,8 @@ export const Button: React.FC<ButtonProps> = ({
   rel,
   ...props
 }) => {
+  const theme = useTheme();
+
   // Base styles common to all variants
   const baseStyles = {
     fontWeight: 600,
@@ -43,28 +47,28 @@ export const Button: React.FC<ButtonProps> = ({
   // Variant-specific styles
   const variantStyles = {
     primary: {
-      background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
-      color: 'white',
+      background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.primary.light} 100%)`,
+      color: theme.palette.background.default,
       px: 4,
       py: 1.5,
       fontSize: '1.1rem',
-      boxShadow: '0 4px 20px rgba(99, 102, 241, 0.3)',
+      boxShadow: `0 4px 20px ${alpha(theme.palette.primary.main, 0.3)}`,
       '&:hover': {
-        background: 'linear-gradient(135deg, #5b5ee6 0%, #7c3aed 100%)',
+        background: `linear-gradient(135deg, ${theme.palette.primary.dark} 0%, ${theme.palette.primary.main} 100%)`,
         transform: 'translateY(-2px)',
-        boxShadow: '0 6px 25px rgba(99, 102, 241, 0.4)'
+        boxShadow: `0 6px 25px ${alpha(theme.palette.primary.main, 0.4)}`
       },
       '&:disabled': {
-        background: '#9ca3af',
+        background: theme.palette.action.disabled,
         transform: 'none',
         boxShadow: 'none'
       }
     },
     navigation: {
-      color: 'white',
+      color: theme.palette.text.primary,
       fontWeight: 500,
       '&:hover': {
-        backgroundColor: 'rgba(255, 255, 255, 0.1)',
+        backgroundColor: alpha(theme.palette.primary.main, 0.1),
         transform: 'translateY(-1px)'
       }
     },
@@ -73,9 +77,10 @@ export const Button: React.FC<ButtonProps> = ({
       textTransform: 'none',
       fontWeight: 600,
       px: 3,
-      background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
+      background: `linear-gradient(135deg, ${theme.palette.primary.main} 0%, ${theme.palette.primary.light} 100%)`,
+      color: theme.palette.background.default,
       '&:hover': {
-        background: 'linear-gradient(135deg, #5b5ee6 0%, #7c3aed 100%)'
+        background: `linear-gradient(135deg, ${theme.palette.primary.dark} 0%, ${theme.palette.primary.main} 100%)`
       }
     }
   };
