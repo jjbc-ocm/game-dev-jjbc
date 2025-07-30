@@ -7,6 +7,92 @@
         "personal": true,
         "projects": [
             {
+                "name": "Sky Strike: Missile Mayhem",
+                "url": "https://jjbconecodeman.myportfolio.com/www",
+                "imageUrl": "/assets/img/sky-strike.png",
+                "description": "A hybrid-casual game blending bullet-hell and shooter genres with a gacha system for diverse missile types and rarities. Players demolish enemy bases while upgrading missiles and aircraft.",
+                "metrics": [
+                    {
+                        "type": "Development Timeline",
+                        "value": "Developed fully functional prototype within one week from December 15, 2023"
+                    },
+                    {
+                        "type": "Features",
+                        "value": "Implemented ranking system, tournaments, boss fights, and procedural map generation using Collapse Wave Function algorithm"
+                    }
+                ],
+                "tools": [
+                    "Unity",
+                    "C#",
+                    "Unity Gaming Services",
+                    "JavaScript",
+                    "GitHub",
+                    "DoTween",
+                    "Photoshop"
+                ],
+                "role": "Game Developer",
+                "responsibilities": [
+                    "Designed and implemented core game mechanics and gacha system",
+                    "Built procedural map generation using Collapse Wave Function algorithm",
+                    "Created dynamic UI animations using DoTween",
+                    "Integrated Unity Gaming Services for backend management",
+                    "Optimized performance and visual effects across different devices"
+                ]
+            },
+            {
+                "name": "Infinitube",
+                "url": "https://jjbconecodeman.myportfolio.com/infinitube",
+                "imageUrl": "/assets/img/infinitube.png",
+                "description": "A puzzle and turn-based tactical strategy game where players manage resources while solving puzzles, aiming for optimal and efficient solutions within minimal turns.",
+                "metrics": [
+                    {
+                        "type": "Scope",
+                        "value": "Developed prototype with 20+ levels across 4 distinct regions"
+                    }
+                ],
+                "tools": [
+                    "Unity",
+                    "C#",
+                    "Visual Studio",
+                    "GitHub"
+                ],
+                "role": "Game Developer",
+                "responsibilities": [
+                    "Developed complete game prototype with 20+ levels",
+                    "Designed and implemented puzzle mechanics and resource management systems",
+                    "Created turn-based tactical gameplay mechanics",
+                    "Built level progression system across 4 distinct regions"
+                ]
+            },
+            {
+                "name": "Knightmare Crusade",
+                "url": "https://jjbconecodeman.myportfolio.com/knightmare-crusade",
+                "imageUrl": "/assets/img/knightmare-crusade.png",
+                "description": "A horror ARPG inspired by Diablo series, featuring a unique dual-reality mechanic where players can switch between overworld and underworld for solving puzzles and combat.",
+                "metrics": [
+                    {
+                        "type": "Technical Achievement",
+                        "value": "Implemented seamless dual-reality switching mechanic with optimized performance"
+                    }
+                ],
+                "tools": [
+                    "Unity",
+                    "C#",
+                    "Visual Studio",
+                    "GitHub",
+                    "Beautify",
+                    "Tessera"
+                ],
+                "role": "Game Developer",
+                "responsibilities": [
+                    "Designed and implemented dual-reality switching mechanic",
+                    "Created procedural map generation system using Tessera",
+                    "Implemented post-processing effects with Beautify for horror atmosphere",
+                    "Built ARPG combat system inspired by Diablo series",
+                    "Optimized performance while maintaining visual quality"
+                ]
+            },
+            {
                 "name": "Smart Saving Tracker",
                 "url": "https://expense-ai-tracker-three.vercel.app/",
                 "imageUrl": "/assets/img/blank.png",

@@ -20,7 +20,7 @@ import React, { useState } from 'react';
 
 export default function Projects() {
     const theme = useTheme();
-    const [expanded, setExpanded] = useState(1); // 1 = Cloudnode IT Solutions expanded by default
+    const [expanded, setExpanded] = useState(0); // 0 = Personal Projects expanded by default
 
     const handleAccordionChange = (panel: number) => (_event: React.SyntheticEvent, isExpanded: boolean) => {
         setExpanded(isExpanded ? panel : -1);
